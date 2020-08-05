@@ -23,8 +23,9 @@ theme:
     previous: 80 # p
     search: 83   # s
   palette:
-    primary: 'blue'
-    accent: 'blue'
+    scheme: 'slate'
+    primary: 'indigo'
+    accent: 'indigo'
   features:
     - tabs
   #font:
