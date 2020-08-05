@@ -13,7 +13,7 @@ repo_url: 'https://github.com/pesutak/doc2'
 edit_uri: 'https://github.com/pesutak/doc2/edit/master/docs_sample'
 
 # Configuration
-docs_dir: 'public'
+docs_dir: 'public/pub'
 theme:
   name: 'material'
   language: 'en'
