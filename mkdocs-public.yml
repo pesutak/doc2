@@ -23,7 +23,7 @@ theme:
     previous: 80 # p
     search: 83   # s
   palette:
-    scheme: 'slate'
+  #  scheme: 'slate'
     primary: 'indigo'
     accent: 'indigo'
   features:
@@ -67,4 +67,4 @@ extra:
 
 # Page tree
 nav:
-  - 'Home': 'public/README.md'
+  - 'Home': 'README.md'
