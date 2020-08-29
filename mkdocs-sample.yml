@@ -40,8 +40,8 @@ markdown_extensions:
   - admonition
   - codehilite
   - footnotes
-  - mdx_math:
-      enable_dollar_delimiter: true
+  #- mdx_math:
+  #    enable_dollar_delimiter: true
   - toc:
       permalink: true
       separator: '_'
