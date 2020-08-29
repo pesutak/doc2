@@ -1,0 +1,31 @@
+name: heroku-ci
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  
+  build-and-deploy-using-docker:
+    runs-on: ubuntu-latest
+    container:
+      image: squidfunk/mkdocs-material
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build using Docker
+        run: |
+          cd "${GITHUB_WORKSPACE}"
+          cp "${GITHUB_WORKSPACE}"/lightgallery-markdown/lightgallery.py /usr/local/lib/python3.8/lightgallery.py
+          mkdocs build --config-file ./mkdocs-sample.yml -d private/docs
+      
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GHPAGES_TOKEN }}
+          publish_dir: ./private
+          publish_branch: heroku
+          #destination_dir: docs
+          
