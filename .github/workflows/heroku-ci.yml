@@ -27,5 +27,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./private
           publish_branch: heroku
+          keep_files: true
           #destination_dir: docs
           
