@@ -1,21 +1,37 @@
-{% extends 'layout.html' %}
-
-{% block title %}{% endblock %}
-
-
-{% block content %}
-
-  <div class="container">
-		<div class="item">
-			<img src="logo.png" align="left">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Excalibur Private Documentation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color:#ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container left-padding img-margin">
+			<img src="logo.svg" class="rounded float-right" alt="excalibur logo" style="top: 30px;">
+			<h1 class="display-4">Excalibur Private Documentation</h1>
+			<p class="lead">This is the place where we share distillations of our brains</p>
+			
 		</div>
-		<div class=item">
-			<h1>{{ title }}</h1>
-    	<p>please log in with an account that is a member of the excalibur-enterprise organization</p>
-    	<hr><br>
-    
-    	<a href="/auth/github" class="btn btn-default">Login with Github</a>
-		</div>
-  </div>
-
-{% endblock %}
+	</div>
+	<ul>
+		<li>
+			<a href="/auth/github"><i class="fa fa-github" aria-hidden="true"></i></a>
+		</li>
+	</ul>
+	<div class="fixed-bottom"><p class="lead text-center">Note: log in with an account that is a member of the excalibur-enterprise organization</p></div>
+</body>
+</html>
