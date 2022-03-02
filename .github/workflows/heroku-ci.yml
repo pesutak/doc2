@@ -13,7 +13,7 @@ jobs:
     container:
       image: squidfunk/mkdocs-material
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Build using Docker
         run: |
           cd "${GITHUB_WORKSPACE}"
